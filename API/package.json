@@ -1,0 +1,39 @@
+{
+  "name": "TopTal-Assessment-API",
+  "version": "1.0.0",
+  "description": "Test Automation Framework with Mocha and Chai",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --config .prettierrc **/**/*.ts --write",
+    "tslint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "mocha": "mocha --config .mocharc.json",
+    "tests": "npm run mocha"
+  },
+  "keywords": [
+    "mocha",
+    "chai",
+    "typescript",
+    "automation",
+    "api"
+  ],
+  "author": "Fabio Santoro",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/chai-json-schema": "^1.4.6",
+    "@types/mocha": "^9.0.0",
+    "ajv": "^8.6.2",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "chai-json-schema-ajv": "^5.2.4",
+    "mocha": "^9.1.1",
+    "mochawesome": "^6.2.2",
+    "ts-node": "^10.2.1",
+    "tslint": "^6.1.3",
+    "tslint-no-unused-expression-chai": "^0.1.4",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.0"
+  }
+}

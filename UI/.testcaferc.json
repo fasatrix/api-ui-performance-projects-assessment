@@ -1,0 +1,15 @@
+{
+  "browsers": "chrome",
+  "src": "./tests",
+  "reporter": {
+    "name": "html",
+    "output": "./reports/test-report/report.html"
+  },
+  "screenshots": {
+    "path": "./screenshots/",
+    "takeOnFails": true,
+    "fullPage": true
+  },
+  "concurrency": 3,
+  "assertionTimeout": 60000
+}

@@ -1,0 +1,29 @@
+name: CI
+on:
+  push:
+    paths:
+      - './API'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      ENV: ${{ secrets.ENV }}
+      API_KEY: ${{ secrets.API_KEY }}
+
+    steps:
+      - name: Begin CI
+        uses: actions/checkout@v2
+
+      - name: Use Node 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.15.3
+      - uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: npm i
+        working-directory: ./API
+
+      - name: Run Mocha Tests
+        run: npm run tests

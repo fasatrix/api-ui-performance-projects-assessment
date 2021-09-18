@@ -1,0 +1,19 @@
+{
+  "name": "TopTal-Assessment-UI",
+  "version": "1.0.0",
+  "description": "TopTal Assessment - Take Home project",
+  "scripts": {
+    "tests": "./node_modules/.bin/testcafe --config-file ./.testcaferc.json",
+    "tests:ci": "./node_modules/.bin/testcafe chrome:headless ./tests --reporter html:./reports/report.html --assertion-timeout 60000",
+    "prettier": "./node_modules/.bin/prettier --config .prettierrc **/**/*.js --write"
+  },
+  "author": "Fabio Santoro",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "^1.11.0",
+    "testcafe-reporter-html": "^1.4.6"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.0"
+  }
+}

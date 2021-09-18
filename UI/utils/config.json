@@ -1,0 +1,8 @@
+{
+  "prod": {
+    "url": "http://automationpractice.multiformis.com/"
+  },
+  "test": {
+    "url": "http://automationpractice.multiformis.com/"
+  }
+}

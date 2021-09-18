@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    paths:
+      - './UI'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      ENV: ${{ secrets.ENV }}
+
+    steps:
+      - name: Begin CI
+        uses: actions/checkout@v2
+
+      - name: Use Node 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.15.3
+      - uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: npm i
+        working-directory: ./UI
+
+      - name: Run TestCafe Tests
+        run: npm run tests:ci
+
+

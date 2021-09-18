@@ -1,0 +1,9 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-no-unused-expression-chai"],
+  "rules": {
+    "trailing-comma": [true],
+    "no-console": true,
+    "no-var-requires": false
+  }
+}

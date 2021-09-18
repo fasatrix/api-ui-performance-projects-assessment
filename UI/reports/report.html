@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Contents/bootstrap-sortable.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/bootstrap-sortable.js"></script>
+    <script src="https://cdn.rawgit.com/drvic10k/bootstrap-sortable/ff650fd1/Scripts/moment.min.js"></script>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+
+      .thumbImg {
+        width: 100%;
+        max-width: 35px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        border-width: 1px;
+        border-color: #f1f1f1;
+        border-style: solid;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.7);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      .closeModal {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .closeModal:hover,
+      .closeModal:focus {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <span class="closeModal">&times;</span>
+      <img class="modal-content" id="modelImage">
+    </div>
+    <div class="container">
+
+      <h1 class="text-primary">TestCafe Test Summary</h1>
+      <div class="client-logo" style="padding:15px"></div>
+      <div class="bg-primary" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <h3>Summary</h3><br>
+        <p class="lead">Start Time: Sat Sep 18 2021 10:46:09 GMT+1200 (New Zealand Standard Time)</p>
+        <p class="lead">Browsers: Chrome 93.0.4577.82 / Windows 10</p>
+        <p class="lead">Duration: 26s</p>
+        <p class="lead">Tests Failed: 0 out of 8</p>
+        <p class="lead">Tests Skipped: 0</p>
+      </div><br>
+      <table class="table sortable" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Fixture</th>
+            <th>Test Name</th>
+            <th>Browsers</th>
+            <th>Duration</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr class="success">
+  <td>1</td>
+  <td>File Upload function</td>
+  <td>As a Customer I should able to submit a contact form with a valid attachment</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>2</td>
+  <td>File Upload function</td>
+  <td>As a Customer I should NOT be able to submit a contact form with invalid attachments (e.g. empty.xlsx)</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>3</td>
+  <td>File Upload function</td>
+  <td>As a Customer I should NOT be able to submit a contact form with a valid attachment without a valid email address</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>12s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>4</td>
+  <td>Search Function</td>
+  <td>As a Customer I should be able to see preview results (under the search box) of the searched product keyword</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>5</td>
+  <td>Search Function</td>
+  <td>As a Customer I should be able to see the preview of multiple product matching the keyword "Dress"</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>7s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>6</td>
+  <td>Search Function</td>
+  <td>As a Customer I should be able to see a product detail page after clicking on a product ("Blouse") following a key search</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>9s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>7</td>
+  <td>Search Function</td>
+  <td>As a customer I should see zero results and the "Please enter a search keyword" message, if searching by not entering any keyword</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+ <tr class="success">
+  <td>8</td>
+  <td>Search Function</td>
+  <td>As a customer I should see zero results and the "No results were found for your search " "" message, if searching with an empty string keyword</td>
+  <td>Chrome 93.0.4577.82 / Windows 10</td>
+  <td>6s</td>
+  <td>passed</td>
+ </tr>
+
+        </tbody>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+      <br>
+      <h3>Error Details</h3>
+      
+    </div>
+    <script>
+      const modal = document.getElementById('myModal');
+      const modalImage = document.getElementById("modelImage");
+
+      Array.from(document.getElementsByClassName("thumbImg")).forEach(function(el) {
+        el.onclick = function() {
+          modal.style.display = "block";
+          modalImage.src = this.src;
+        }
+      });
+
+      document.getElementsByClassName("closeModal")[0].onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+  <br>
+</html>
