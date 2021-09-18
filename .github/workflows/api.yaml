@@ -1,8 +1,10 @@
 name: CI API
 on:
   push:
+    branches:
+      - '*'
     paths:
-      - './API'
+      - './API/*'
 jobs:
   test:
     runs-on: ubuntu-latest

@@ -1,8 +1,10 @@
 name: CI E2E
 on:
   push:
+    branches:
+      - '*'
     paths:
-      - './UI'
+      - './UI/*'
 jobs:
   test:
     runs-on: ubuntu-latest
