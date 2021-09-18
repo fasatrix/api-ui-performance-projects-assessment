@@ -1,10 +1,8 @@
 name: CI API
 on:
   push:
-    branches:
-      - '*'
     paths:
-      - './API/*'
+      - 'API/**'
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -21,11 +19,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.15.3
-      - uses: actions/checkout@v1
 
       - name: Install dependencies
         run: npm i
         working-directory: ./API
 
       - name: Run Mocha Tests
-        run: npm run tests
+        run: |
+          npm run tests
+        working-directory: ./API

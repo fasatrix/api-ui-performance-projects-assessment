@@ -1,10 +1,8 @@
 name: CI E2E
 on:
   push:
-    branches:
-      - '*'
     paths:
-      - './UI/*'
+      - 'UI/**'
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,7 +18,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.15.3
-      - uses: actions/checkout@v1
 
       - name: Install dependencies
         run: npm i
@@ -28,5 +25,4 @@ jobs:
 
       - name: Run TestCafe Tests
         run: npm run tests:ci
-
-
+        working-directory: ./UI

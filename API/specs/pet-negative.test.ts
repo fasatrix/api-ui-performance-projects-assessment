@@ -2,7 +2,7 @@ import { expect, http, headers } from '../utils/common.util';
 import { invalidIds404Response, invalidIds415Response, invalidIds400Response } from '../data/petData'
 import {apiRes} from "../schemas/getSchemas";
 
-describe('API Testing - Petstore - Negative Test Flows ', ()=>{
+describe('API Testing - Petstore - Negative Test Flows', ()=>{
     for (const id of invalidIds404Response){
         describe(`HTTP - POST 404 - Test Scenario: ${id}`, ()=>{
             let response: ChaiHttp.Response;

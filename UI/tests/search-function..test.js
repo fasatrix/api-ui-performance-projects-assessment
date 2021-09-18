@@ -3,7 +3,7 @@ import { url } from '../utils/common';
 
 fixture`Search Function`.page`${url}`;
 
-test('As a Customer I should be able to see preview results (under the search box) of the searched product keyword', async (t) => {
+test('As a Customer I should be able to see preview results (under the search box) of the searched product keyword ', async (t) => {
   await hp.productPreviewResults('T-shirt');
 });
 
