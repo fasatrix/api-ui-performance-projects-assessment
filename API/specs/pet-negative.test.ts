@@ -4,7 +4,7 @@ import {apiRes} from "../schemas/getSchemas";
 
 describe('API Testing - Petstore - Negative Test Flows', ()=>{
     for (const id of invalidIds404Response){
-        describe(`HTTP - POST 404 - Test Scenario: ${id}`, ()=>{
+        describe(`HTTP POST 404 - Test Scenario: ${id}`, ()=>{
             let response: ChaiHttp.Response;
             before('HTTP Request', async () => {
                 response = await http
