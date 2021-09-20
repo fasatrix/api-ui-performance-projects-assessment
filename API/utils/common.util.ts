@@ -5,9 +5,9 @@ import Ajv from 'ajv';
 chai.use(chaiHttp);
 const ajv = new Ajv({ strictTuples: false });
 chai.use(
-    require('chai-json-schema-ajv').create({
-      ajv
-    })
+  require('chai-json-schema-ajv').create({
+    ajv
+  })
 );
 
 const envConf = require('./config.json');
@@ -21,15 +21,16 @@ export const { expect } = chai;
 
 export let headers = [
   'Content-Type: application/json',
+  'accept : application/json',
   `api_key: ${process.env.API_KEY}`
 ];
 
 export const createPet = (
-    id: number,
-    name: string,
-    category: string,
-    url: string,
-    status: status
+  id: number,
+  name: string,
+  category: string,
+  url: string,
+  status: status
 ) => {
   return {
     id,

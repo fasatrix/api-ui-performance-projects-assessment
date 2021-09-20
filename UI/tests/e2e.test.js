@@ -7,7 +7,7 @@ import { payments } from '../data/payments';
 
 fixture`E2E Scenarios`.page`${url}`;
 
-test('As a LoggedIn Customer I should be able to see purchase a "Blouse"', async (t) => {
+test('As a Logged in Customer I should be able to purchase a "Blouse"', async (t) => {
   await p.loginAsCustomer();
   await hp.searchProductsByKeyWord('Dress');
   await hp.selectProductByPosition(7);

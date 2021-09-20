@@ -1,9 +1,9 @@
 import cp from '../pages/contact-form.page';
 import { url } from '../utils/common';
 
-fixture`File Upload function`.page`${url}`;
+fixture`File Upload Function`.page`${url}`;
 
-test('As a Customer I should able to submit a contact form with a valid attachment', async (t) => {
+test('As a Customer I should be able to submit a contact form with a valid attachment', async (t) => {
   await cp.navigateToContactUs();
   await cp.selectOptionByName('Customer service');
   await cp.typeTextIn('foo@foo.com', 'email');
@@ -32,7 +32,7 @@ test('As a Customer I should NOT be able to submit a contact form with invalid a
   await t.expect(message).eql('Bad file extension');
 });
 
-test('As a Customer I should NOT be able to submit a contact form with a valid attachment without a valid email address', async (t) => {
+test('As a Customer I should NOT be able to submit a contact form with a valid attachment and an invalid email address', async (t) => {
   await cp.navigateToContactUs();
   await cp.selectOptionByName('Customer service');
   await cp.typeTextIn('bla', 'email');

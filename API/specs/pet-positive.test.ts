@@ -10,8 +10,8 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
       describe(`Get Pet by their status=${s}`, () => {
         before('HTTP Request', async () => {
           response = await http
-              .get(`/pet/findByStatus?status=${s}`)
-              .set(headers);
+            .get(`/pet/findByStatus?status=${s}`)
+            .set(headers);
         });
         it('it should return the correct error code', () => {
           expect(response.status).to.eql(200);
@@ -29,11 +29,11 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
     describe('Create a new Pet', () => {
       before('HTTP POST Request - Create a Pet', async () => {
         data = createPet(
-            5,
-            'BlueWhale',
-            'home',
-            'https://someUrl',
-            status.sold
+          5,
+          'BlueWhale',
+          'home',
+          'https://someUrl',
+          status.sold
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });
@@ -43,7 +43,7 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
       it('it should return the correct schema (ajv checks all types and structures)', () => {
         expect(createResponse.body).to.be.jsonSchema(Pet);
       });
-      describe('Retrieve the newly create PET', () => {
+      describe('Retrieve the newly created PET', () => {
         let retrieveResponse: ChaiHttp.Response;
         before('HTTP GET Request - Create a Pet', async () => {
           retrieveResponse = await http.get(`/pet/${data.id}`).set(headers);
@@ -56,22 +56,22 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
         });
         it('it should have the correct name', () => {
           expect(retrieveResponse.body.name).to.be.eql(
-              createResponse.body.name
+            createResponse.body.name
           );
         });
         it('it should have the correct category', () => {
           expect(retrieveResponse.body.category.name).to.be.eql(
-              createResponse.body.category.name
+            createResponse.body.category.name
           );
         });
         it('it should have the correct status', () => {
           expect(retrieveResponse.body.status).to.be.eql(
-              createResponse.body.status
+            createResponse.body.status
           );
         });
         it('it should have the correct tag', () => {
           expect(retrieveResponse.body.tags[0].name).to.be.eql(
-              createResponse.body.tags[0].name
+            createResponse.body.tags[0].name
           );
         });
       });
@@ -84,11 +84,11 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
     describe('Create a new Pet', () => {
       before('HTTP POST Request - Create a Pet', async () => {
         data = createPet(
-            5,
-            'BlueWhale',
-            'home',
-            'https://someUrl',
-            status.sold
+          5,
+          'BlueWhale',
+          'home',
+          'https://someUrl',
+          status.sold
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });
@@ -98,7 +98,7 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
       it('it should return the correct schema (ajv checks all types and structures)', () => {
         expect(createResponse.body).to.be.jsonSchema(Pet);
       });
-      describe('Remove the newly create PET', () => {
+      describe('Remove the newly created PET', () => {
         let removeResponse: ChaiHttp.Response;
         before('HTTP DELETE Request - Create a Pet', async () => {
           removeResponse = await http.delete(`/pet/${data.id}`).set(headers);
@@ -128,11 +128,11 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
     describe('Create a new Pet', () => {
       before('HTTP POST Request - Create a Pet', async () => {
         data = createPet(
-            6,
-            'BlueWhale',
-            'home',
-            'https://someUrl',
-            status.sold
+          6,
+          'BlueWhale',
+          'home',
+          'https://someUrl',
+          status.sold
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });
@@ -142,7 +142,7 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
       it('it should return the correct schema (ajv checks all types and structures)', () => {
         expect(createResponse.body).to.be.jsonSchema(Pet);
       });
-      describe('Update the create PET', () => {
+      describe('Update the created PET', () => {
         let updateResponse: ChaiHttp.Response;
         before('HTTP Update Request - Create a Pet', async () => {
           data.name = 'new BlueWhales';
@@ -159,7 +159,7 @@ describe('API Testing - Petstore - Positive Test Flows', () => {
         });
         it('it should have the correct category', () => {
           expect(updateResponse.body.category.name).to.be.eql(
-              data.category.name
+            data.category.name
           );
         });
         it('it should have the correct status', () => {
