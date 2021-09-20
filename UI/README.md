@@ -7,10 +7,8 @@
 * npm install
 * npm run tests
 
-## Documentation 
+## Documentation
 * Test Flows Documentation located under ./test-flows
-* Bug Report located under ./bug-report
+* Bug Report located under ./reports/bug-report
 * Data used for the upload file tests under ./data
-* HTML test report will be generated automatically in ./UI/reports/test-report/report.html
-
-
+* HTML test report will be generated automatically in ./reports/test-report
