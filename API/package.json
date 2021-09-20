@@ -6,7 +6,7 @@
   "scripts": {
     "prettier": "prettier --config .prettierrc **/**/*.ts --write",
     "tslint": "tslint -c tslint.json -p tsconfig.json --fix",
-    "mocha": "mocha --config .mocharc.json",
+    "mocha": "mocha --config .mocharc.json --reporter-options reportDir=./reports/test-report",
     "tests": "npm run mocha"
   },
   "keywords": [

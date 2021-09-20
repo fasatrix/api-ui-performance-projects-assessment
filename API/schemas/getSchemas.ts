@@ -25,7 +25,7 @@ export const Pet = {
         {
           type: 'string'
         }
-      ],
+      ]
     },
     tags: {
       type: 'array',
@@ -69,7 +69,7 @@ export const apiRes = {
     },
     message: {
       type: 'string'
-    },
+    }
   },
   additionalProperties: false
-}
+};

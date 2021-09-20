@@ -4,7 +4,7 @@
   "description": "TopTal Assessment - Take Home project",
   "scripts": {
     "tests": "./node_modules/.bin/testcafe --config-file ./.testcaferc.json",
-    "tests:ci": "./node_modules/.bin/testcafe chrome:headless ./tests --reporter html:./reports/report.html --assertion-timeout 60000",
+    "tests:ci": "./node_modules/.bin/testcafe chrome:headless ./tests --reporter spec -q attemptLimit=5,successThreshold=1 --assertion-timeout 60000",
     "prettier": "./node_modules/.bin/prettier --config .prettierrc **/**/*.js --write"
   },
   "author": "Fabio Santoro",

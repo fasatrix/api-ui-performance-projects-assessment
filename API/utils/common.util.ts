@@ -1,14 +1,14 @@
 import chaiHttp from 'chai-http';
 import chai from 'chai';
 import { status } from '../data/petData';
-import Ajv from "ajv";
+import Ajv from 'ajv';
 chai.use(chaiHttp);
 const ajv = new Ajv({ strictTuples: false });
 chai.use(
     require('chai-json-schema-ajv').create({
       ajv
     })
-)
+);
 
 const envConf = require('./config.json');
 const env: string = process.env.ENV ?? 'test';
@@ -25,11 +25,11 @@ export let headers = [
 ];
 
 export const createPet = (
-  id: number,
-  name: string,
-  category: string,
-  url: string,
-  status: status
+    id: number,
+    name: string,
+    category: string,
+    url: string,
+    status: status
 ) => {
   return {
     id,
