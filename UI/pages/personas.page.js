@@ -1,5 +1,5 @@
 import { Selector, t, Role } from 'testcafe';
-import { url } from '../utils/common';
+import { url, customerUsername, customerPassword } from '../utils/common';
 import h from './header.page';
 
 class PersonasPage {
@@ -10,20 +10,20 @@ class PersonasPage {
     this.password = Selector('#passwd');
     this.btn = Selector('#SubmitLogin > span');
 
-    this.customerPaul = new Role(
-      `${url}index.php?controller=authentication&back=my-account`,
-      async (t) => {
-        await t
-          .click(this.signInBtn)
-          .typeText(this.username, 'foo@foo.com')
-          .typeText(this.password, '123456789')
-          .click(this.btn);
-      }
+    this.customer = new Role(
+        `${url}index.php?controller=authentication&back=my-account`,
+        async (t) => {
+          await t
+              .click(this.signInBtn)
+              .typeText(this.username, customerUsername)
+              .typeText(this.password, customerPassword)
+              .click(this.btn);
+        }
     );
   }
 
   async loginAsCustomer() {
-    await t.useRole(this.customerPaul);
+    await t.useRole(this.customer);
   }
 }
 

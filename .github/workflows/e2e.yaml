@@ -9,6 +9,8 @@ jobs:
 
     env:
       ENV: ${{ secrets.ENV }}
+      CUST_USERNAME: ${{ secrets.CUST_USERNAME }}
+      CUST_PASSWORD: ${{ secrets.CUST_PASSWORD }}
 
     steps:
       - name: Begin CI
