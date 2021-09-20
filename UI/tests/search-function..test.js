@@ -1,4 +1,5 @@
 import hp from '../pages/header.page';
+import pd from '../pages/product-details.page';
 import { url } from '../utils/common';
 
 fixture`Search Function`.page`${url}`;
@@ -21,7 +22,7 @@ test('As a Customer I should be able to see the preview of multiple product matc
 test('As a Customer I should be able to see a product detail page after clicking on a product ("Blouse") following a key search', async (t) => {
   await hp.searchProductsByKeyWord('Dress');
   await hp.selectProductByPosition(7);
-  const visible = await hp.productWithNameIsVisible('Blouse');
+  const visible = await pd.productWithNameIsVisible('Blouse');
   await t.expect(visible).ok();
 });
 
