@@ -5,7 +5,7 @@ import p from '../pages/personas.page';
 import { url } from '../utils/common';
 import { payments } from '../data/payments';
 
-fixture`Search Function`.page`${url}`;
+fixture`E2E Scenarios`.page`${url}`;
 
 test('As a LoggedIn Customer I should be able to see purchace a "Blouse"', async (t) => {
   await p.loginAsCustomer();
