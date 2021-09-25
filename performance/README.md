@@ -14,30 +14,38 @@
 * Go to `performance/apache-jmeter-5.4.1/bin` locate and open `ApacheJMeter.jar`
 * From the Menu/Options open `Plugins Manager`
 * Under available search for `Selenium/WebDriver Support` and install it
+* Create the following structure (dir and subdirectory)r:
+  * performance/results/api
+  * performance/results/web-driver
+  * performance/results/jmeter-reports/api
+  * performance/results/jmeter-reports/webdriver  
 * Run 
   * For Web Driver Test Plan `jmeter -Dwebdriver.gecko.driver=<absolute path to>/performance/geckodriver-v0.29.1-win64\geckodriver.exe -n -t <absolute path to>/performance\jmx\jmeter-webdriver.jmx -l <absolute path to>/performance\results\web-driver\results.jtl -e -o <absolute path to>/performance\results\jmeter-reports\web-driver` 
   * For API Test Plan `jmeter -Dwebdriver.gecko.driver=<absolute path to>/performance/geckodriver-v0.29.1-win64\geckodriver.exe -n -t <absolute path to>/performance\jmx\jmeter-api.jmx -l <absolute path to>/performance\results\api\results.jtl -e -o <absolute path to>/performance\results\reports\jmeter-reports\api`
+* Before attempting to rerun the test ensure to remove all content from : `performance\results\jmeter-reports\web-driver`, `performance\results\jmeter-reports\api`, `performance\results\web-driver`,`performance\results\api`  
 
 ### Via Docker (Depending on th machine this can be a long process as the image is big)
+*** Prerequisite Docker installed and running ****
 * Clone the repo: `git clone git@git.toptal.com:screening/Fabio-Santoro.git`
 * cd performance  
-* Remove all files and subdirectory under the following dir: 
+* Create the following structure (dir and subdirectory)r:
   * performance/results/api
   * performance/results/web-driver
   * performance/results/jmeter-reports/api
   * performance/results/jmeter-reports/webdriver
 * Run the following `docker build -t jmeter-webdriver:1 .` 
-* Run `docker run -it -v <absolute path to>\
-  performance\results:/opt/jmeter/results -v <absolute path to>\performance\jmx:/opt/jmeter/jmx jmeter-webdriver:1 bash`
+* Run `docker run -it -v <absolute path to>\performance\results:/opt/jmeter/results -v <absolute path to>\performance\jmx:/opt/jmeter/jmx jmeter-webdriver:1 bash`
 * On prompt run `Xvfb :99 &`
 * Run `cd /opt/jmeter`
 * Run 
   * For Web Driver Test Plan: `jmeter -n -t jmx/jmeter-webdriver.jmx -l results/web-driver/result.jtl -e -o results/jmeter-reports/web-driver`
-  * For API Test Plan: `jmeter -n -t jmx/jmeter-api.jmx -l results/api/result.jtl -e -o results/jmeter-reports/api`   
+  * For API Test Plan: `jmeter -n -t jmx/jmeter-api.jmx -l results/api/result.jtl -e -o results/jmeter-reports/api` 
+* Before attempting to rerun the test ensure to remove all content from : `performance\results\jmeter-reports\web-driver`, `performance\results\jmeter-reports\api`, `performance\results\web-driver`,`performance\results\api`
 
 
 ## Documentation
-
-* HTML test report will be generated automatically in <absolute path to>/performance/results/jmeter-reports/index.html
+### HTML test report will be generated automatically in:
+* For API: `<absolute path to>/performance/results/jmeter-reports/api`
+* For Web Driver: `<absolute path to>/performance/results/jmeter-reports/web-driver`
 
 

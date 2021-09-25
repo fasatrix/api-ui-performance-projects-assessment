@@ -3,7 +3,7 @@ import { Pet, Pets, apiRes } from '../schemas/getSchemas';
 import { status } from '../data/petData';
 import { describe, Runnable } from 'mocha';
 
-describe('API Testing - Petstore - Positive Test Flows', () => {
+describe('API Testing - Pet - Positive Test Flows', () => {
   describe('GET - Generic queries', () => {
     let response: ChaiHttp.Response;
     for (const s in status) {

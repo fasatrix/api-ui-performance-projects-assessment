@@ -11,14 +11,14 @@ class PersonasPage {
     this.btn = Selector('#SubmitLogin > span');
 
     this.customer = new Role(
-        `${url}index.php?controller=authentication&back=my-account`,
-        async (t) => {
-          await t
-              .click(this.signInBtn)
-              .typeText(this.username, customerUsername)
-              .typeText(this.password, customerPassword)
-              .click(this.btn);
-        }
+      `${url}index.php?controller=authentication&back=my-account`,
+      async (t) => {
+        await t
+          .click(this.signInBtn)
+          .typeText(this.username, customerUsername)
+          .typeText(this.password, customerPassword)
+          .click(this.btn);
+      }
     );
   }
 
