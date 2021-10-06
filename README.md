@@ -16,7 +16,7 @@
 * All individual Test Summary Report (html)  can be located under `performance\reports`
 
 ### CI Integration
-* https://github.com/fasatrix/toptal-assessment/actions
+* https://github.com/fasatrix/api-ui-performance-projects-assessment/actions
 
 
 
