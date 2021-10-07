@@ -16,7 +16,6 @@ const testEnv = envConf[env];
 
 export const urlToTest =
   process.env.MOCK_URL ?? process.env.TEST_URL ?? testEnv.url;
-console.log(urlToTest)
 export const http = chai.request(urlToTest);
 
 export const { expect } = chai;

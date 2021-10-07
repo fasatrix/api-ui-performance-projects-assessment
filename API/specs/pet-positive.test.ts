@@ -6,7 +6,7 @@ import { describe, Runnable } from 'mocha';
 describe('API Testing - Pet - Positive Test Flows', () => {
   describe('GET - Generic queries', () => {
     let response: ChaiHttp.Response;
-    for (const s in statuses) {
+    for (const s of Object.keys(statuses)) {
       describe(`Get Pet by their status=${s}`, () => {
         before('HTTP Request', async () => {
           response = await http

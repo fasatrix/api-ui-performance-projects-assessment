@@ -2,9 +2,17 @@ import { expect, http, headers, createPet } from '../../utils/common.util';
 import { Pet } from '../../schemas/getSchemas';
 import { describe } from 'mocha';
 import { statuses } from '../../data/petData';
-import {startMockServer, startMockServerWithExpectations, stopMockServer} from '../../mockServer';
-import {petPOST, createADog, createACat} from '../../data/mocks-data/pet.mocked.data';
-import {client, port} from "../../mockServer";
+import {
+  startMockServer,
+  startMockServerWithExpectations,
+  stopMockServer
+} from '../../mockServer';
+import {
+  petPOST,
+  createADog,
+  createACat
+} from '../../data/mocks-data/pet.mocked.data';
+import { client, port } from '../../mockServer';
 
 describe('API Testing - Pet - Mocked Test Flows', () => {
   describe('Create a Pet', () => {
@@ -48,16 +56,16 @@ describe('API Testing - Pet - Mocked Test Flows', () => {
     let createResponse: ChaiHttp.Response;
     let data: any;
     describe('Create a new Dog', () => {
-      before('Inject Data for Dog', async () =>{
-        await client('localhost', port).mockAnyResponse(createADog)
+      before('Inject Data for Dog', async () => {
+        await client('localhost', port).mockAnyResponse(createADog);
       });
       before('HTTP POST Request - Create a Pet', async () => {
         data = createPet(
-            7,
-            'Wally',
-            'Dog',
-            'https://someUrl',
-            statuses.available
+          7,
+          'Wally',
+          'Dog',
+          'https://someUrl',
+          statuses.available
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });
@@ -75,16 +83,16 @@ describe('API Testing - Pet - Mocked Test Flows', () => {
       });
     });
     describe('Create a new Cat', () => {
-      before('Inject Data for Cat', async () =>{
-        await client('localhost', port).mockAnyResponse(createACat)
+      before('Inject Data for Cat', async () => {
+        await client('localhost', port).mockAnyResponse(createACat);
       });
       before('HTTP POST Request - Create a Pet', async () => {
         data = createPet(
-            8,
-            'Tiddle',
-            'Cat',
-            'https://someUrl',
-            statuses.available
+          8,
+          'Tiddle',
+          'Cat',
+          'https://someUrl',
+          statuses.available
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });

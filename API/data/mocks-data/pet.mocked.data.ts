@@ -2,7 +2,7 @@ export const petPOST = [
   {
     httpRequest: {
       method: 'POST',
-      path: '/pet',
+      path: '/pet'
     },
     httpResponse: {
       statusCode: 200,
@@ -30,7 +30,7 @@ export const createADog = [
     httpRequest: {
       method: 'POST',
       path: '/pet',
-      body:  {
+      body: {
         id: 7,
         category: {
           id: 7,
@@ -73,16 +73,16 @@ export const createACat = [
     httpRequest: {
       method: 'POST',
       path: '/pet',
-      body:  {
+      body: {
         type: 'JSON',
-        values:{
+        values: {
           id: 8,
           category: {
             id: 8,
             name: 'Cat'
           },
           name: 'Tiddle',
-          photoUrls: ['https://someUrl',],
+          photoUrls: ['https://someUrl'],
           tags: [
             {
               id: 8,
@@ -102,7 +102,7 @@ export const createACat = [
           name: 'Cat'
         },
         name: 'Tiddle',
-        photoUrls: ['https://someUrl',],
+        photoUrls: ['https://someUrl'],
         tags: [
           {
             id: 8,
@@ -114,4 +114,3 @@ export const createACat = [
     }
   }
 ];
-
