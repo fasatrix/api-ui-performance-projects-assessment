@@ -1,7 +1,7 @@
 {
-  "name": "TopTal-Assessment-UI",
+  "name": "UI-Test-Project",
   "version": "1.0.0",
-  "description": "TopTal Assessment - Take Home project",
+  "description": "UI Test Project",
   "scripts": {
     "tests": "./node_modules/.bin/testcafe --config-file ./.testcaferc.json",
     "tests:ci": "./node_modules/.bin/testcafe chrome:headless ./tests --reporter spec -q attemptLimit=5,successThreshold=1 --assertion-timeout 60000",

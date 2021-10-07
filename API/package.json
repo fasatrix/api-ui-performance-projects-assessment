@@ -1,5 +1,5 @@
 {
-  "name": "TopTal-Assessment-API",
+  "name": "API-Test-Project",
   "version": "1.0.0",
   "description": "Test Automation Framework with Mocha and Chai",
   "main": "index.js",

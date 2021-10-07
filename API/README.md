@@ -3,7 +3,7 @@ Test Automation Framework with Mocha, Chai and Ajv
 
 ## Instructions
 
-* Clone the repo: `git clone git@git.toptal.com:screening/Fabio-Santoro.git`
+* Clone the repo: `git clone git@github.com:fasatrix/api-ui-performance-projects-assessment.git`
 * cd API
 * npm install
 * Create and set and API key (instruction below)  

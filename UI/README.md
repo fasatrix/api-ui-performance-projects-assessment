@@ -2,7 +2,7 @@
 
 ## Instructions
 
-* Clone the repo: `git clone git@git.toptal.com:screening/Fabio-Santoro.git`
+* Clone the repo: `git clone git@github.com:fasatrix/api-ui-performance-projects-assessment.git`
 * cd UI
 * npm install
 * Create a customer account from `http://automationpractice.multiformis.com/index.php?controller=authentication&back=my-account`  

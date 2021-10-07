@@ -4,7 +4,7 @@
 
 ### Manual
 *** * JMeter requires JRE 8 or higher as a prerequisite - please install *****
-* Clone the repo: `git clone git@git.toptal.com:screening/Fabio-Santoro.git`
+* Clone the repo: `git clone git@github.com:fasatrix/api-ui-performance-projects-assessment.git`
 * Download Jmeter apache-jmeter-5.4.1(binaries)  https://jmeter.apache.org/download_jmeter.cgi 
 * cd performance
 * unzip JMeter in here
@@ -26,7 +26,7 @@
 
 ### Via Docker (Depending on th machine this can be a long process as the image is big)
 *** Prerequisite Docker installed and running ****
-* Clone the repo: `git clone git@git.toptal.com:screening/Fabio-Santoro.git`
+* Clone the repo: `git clone git@github.com:fasatrix/api-ui-performance-projects-assessment.git`
 * cd performance  
 * Create the following structure (dir and subdirectory)r:
   * performance/results/api
