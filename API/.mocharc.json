@@ -3,5 +3,6 @@
   "slow": 75,
   "timeout": 20000,
   "spec": [ "specs/**/*.test.ts" ],
+  "exclude": ["specs/mocked-specs/*.test.ts"],
   "require": "ts-node/register"
 }
