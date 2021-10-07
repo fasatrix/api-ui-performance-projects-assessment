@@ -39,7 +39,7 @@ describe('API Testing - Pet - Mocked Test Flows', () => {
     });
   });
   describe('Create Pets', () => {
-    before('Start the Mock Server and Inject Data', async () => {
+    before('Start the Mock Server without data injection', async () => {
       await startMockServer();
     });
     after('Stop the mock server', async () => {
