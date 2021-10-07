@@ -9,7 +9,7 @@
     "mocha": "mocha --config .mocharc.json --reporter-options reportDir=./reports/test-report",
     "tests": "npm run mocha",
     "server": "node mockServer.ts &",
-    "mocked": "cross-env MOCK_URL=https://localhost:1080 && mocha --config .mocharc_mocked.json --reporter-options reportDir=./reports/test-report"
+    "mocked": "cross-env MOCK_URL=http://localhost:1080 mocha --config .mocharc_mocked.json --reporter-options reportDir=./reports/test-report"
   },
   "keywords": [
     "mocha",
