@@ -75,7 +75,7 @@ describe('API Testing - Pet - Mocked Test Flows', () => {
       });
     });
     describe('Create a new Cat', () => {
-      before('Inject Data for Dog', async () =>{
+      before('Inject Data for Cat', async () =>{
         await client('localhost', port).mockAnyResponse(createACat)
       });
       before('HTTP POST Request - Create a Pet', async () => {
