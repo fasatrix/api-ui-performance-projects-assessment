@@ -8,6 +8,7 @@ Test Automation Framework with Mocha, Chai and Ajv
 * npm install
 * Create and set and API key (instruction below)  
 * npm run tests (Prerequisite Create an API Key - Process below)
+* `npm run mocked` will run mocked tests
 
 ## How to Create An API Key
 
