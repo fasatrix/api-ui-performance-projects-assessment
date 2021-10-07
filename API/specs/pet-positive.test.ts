@@ -1,12 +1,12 @@
 import { expect, http, headers, createPet } from '../utils/common.util';
 import { Pet, Pets, apiRes } from '../schemas/getSchemas';
-import { status } from '../data/petData';
+import { statuses } from '../data/petData';
 import { describe, Runnable } from 'mocha';
 
 describe('API Testing - Pet - Positive Test Flows', () => {
   describe('GET - Generic queries', () => {
     let response: ChaiHttp.Response;
-    for (const s in status) {
+    for (const s in statuses) {
       describe(`Get Pet by their status=${s}`, () => {
         before('HTTP Request', async () => {
           response = await http
@@ -33,7 +33,7 @@ describe('API Testing - Pet - Positive Test Flows', () => {
           'BlueWhale',
           'home',
           'https://someUrl',
-          status.sold
+          statuses.sold
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });
@@ -88,7 +88,7 @@ describe('API Testing - Pet - Positive Test Flows', () => {
           'BlueWhale',
           'home',
           'https://someUrl',
-          status.sold
+          statuses.sold
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });
@@ -132,7 +132,7 @@ describe('API Testing - Pet - Positive Test Flows', () => {
           'BlueWhale',
           'home',
           'https://someUrl',
-          status.sold
+          statuses.sold
         );
         createResponse = await http.post('/pet').set(headers).send(data);
       });

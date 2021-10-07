@@ -1,6 +1,5 @@
-import { expect, http, headers, createPet } from '../utils/common.util';
+import { expect, http, headers } from '../utils/common.util';
 import { apiRes } from '../schemas/getSchemas';
-import { status } from '../data/petData';
 import { describe, Runnable } from 'mocha';
 
 describe('API Testing - Store - Positive Test Flows', () => {

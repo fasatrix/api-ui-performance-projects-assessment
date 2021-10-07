@@ -1,0 +1,7 @@
+{
+  "reporter": "mochawesome",
+  "slow": 75,
+  "timeout": 20000,
+  "spec": [ "**/mocked-specs/*.test.ts" ],
+  "require": "ts-node/register"
+}

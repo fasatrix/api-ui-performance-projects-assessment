@@ -1,6 +1,6 @@
 import chaiHttp from 'chai-http';
 import chai from 'chai';
-import { status } from '../data/petData';
+import { statuses } from '../data/petData';
 import Ajv from 'ajv';
 chai.use(chaiHttp);
 const ajv = new Ajv({ strictTuples: false });
@@ -14,7 +14,8 @@ const envConf = require('./config.json');
 const env: string = process.env.ENV ?? 'test';
 const testEnv = envConf[env];
 
-export const urlToTest = process.env.TEST_URL ?? testEnv.url;
+export const urlToTest =
+  process.env.MOCK_URL ?? process.env.TEST_URL ?? testEnv.url;
 export const http = chai.request(urlToTest);
 
 export const { expect } = chai;
@@ -30,7 +31,7 @@ export const createPet = (
   name: string,
   category: string,
   url: string,
-  status: status
+  status: statuses
 ) => {
   return {
     id,

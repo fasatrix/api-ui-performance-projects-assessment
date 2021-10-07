@@ -1,4 +1,4 @@
-export enum status {
+export enum statuses {
   available = 'available',
   pending = 'pending',
   sold = 'sold'
